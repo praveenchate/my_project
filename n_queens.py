@@ -8,7 +8,6 @@ def print_board(board, n):
         print()
     print()
 
-
 def is_safe(board, row, col):
     for i in range(row):
         # Check same column
@@ -22,7 +21,6 @@ def is_safe(board, row, col):
             return False
     return True
 
-
 def solve_n_queen(board, row, n):
     # If all queens are placed
     if row == n:
@@ -34,8 +32,7 @@ def solve_n_queen(board, row, n):
             board[row] = col
             solve_n_queen(board, row + 1, n)
 
-
-n = 4
+n = 5
 board = [-1] * n
 print(f"Solutions for {n}-Queen Problem:\n")
 solve_n_queen(board, 0, n)
